@@ -89,6 +89,7 @@ BaseXRESTClient.prototype = {
         
         if(data)
             req.write(data);
+
         req.end();
 
         return deferred.promise;
@@ -146,6 +147,7 @@ BaseXRESTClient.prototype = {
                 options: opt.options || {},
                 context: opt.context || null
             });
+            
         return this._post(postdata, opt.path);
     },
     command: function(cmd, options){
