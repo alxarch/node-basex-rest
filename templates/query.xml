@@ -1,0 +1,15 @@
+<rest:query xmlns:rest="http://basex.org/rest">
+    <rest:text><![CDATA[<%= query %>]]></rest:text>
+    <% if(context){ %> 
+    <rest:context><%= context %></rest:context>
+    <% } %>
+    <% _.each(options, function(value, name){ %> 
+        <rest:option name="<%= name %>" value="<%= value %>"/>
+    <% }); %>
+    <% _.each(parameters, function(value, name){ %> 
+        <rest:parameter name="<%= name %>" value="<%= value %>"/>
+    <% }); %>
+    <% _.each(variables, function(value, name){ %> 
+        <rest:variable name="<%= name %>" value="<%= value %>"/>
+    <% }); %>
+</rest:query>

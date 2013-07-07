@@ -1,0 +1,9 @@
+<command xmlns="http://basex.org/rest">
+	<text><%= command %></text>
+	<% _.each(options, function(value, name){ %> 
+		<option name="<%= name %>" value="<%= value %>"/>
+	<% }); %>
+	<% _.each(parameters, function(value, name){ %> 
+		<parameter name="<%= name %>" value="<%= value %>"/>
+	<% }); %>
+</command>
